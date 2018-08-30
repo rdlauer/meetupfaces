@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page">
+  
+<ActionBar title="NYC Meetup Faces" class="action-bar">
+</ActionBar>
+
+<StackLayout class="page">
+    <ListView items="{{ items }}" itemTap="fetchPerson" class="list-group">
+        <ListView.itemTemplate>
+			<GridLayout class="list-group-item" rows="auto" columns="auto, *">
+				<Image row="0" col="0" src="{{ member.photo.thumb_link }}" class="thumb img-rounded" />
+				<StackLayout row="0" col="1" >
+					<Label text="{{ member.name }}" class="list-group-item-heading" />
+					<Label text="{{ member.photo.type }}" class="list-group-item-text" />
+				</StackLayout>
+			</GridLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</StackLayout>
+
+</Page>

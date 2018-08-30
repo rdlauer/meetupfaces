@@ -1,0 +1,21 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page">
+  
+<ActionBar title="{{ name }}" class="action-bar">
+	<NavigationButton text="Back" android.visible="false" tap="onNavBtnTap" />
+</ActionBar>
+
+<ScrollView>
+  <GridLayout rows="auto,*,auto">
+      <Image height="400" class="m-20 img-rounded" verticalAlignment="top" src="{{ photo }}" />
+      <GridLayout class="m-l-20 m-b-10" row="1" columns="90,auto" rows="auto,auto,auto">
+          <Label text="Age: " class="lbl-bold" row="0" col="0" />
+          <Label text="{{ result.faceAttributes.age }}" class="lbl" row="0" col="1" />
+          <Label text="Mood: " class="lbl-bold" row="1" col="0" />
+          <Label text="{{ mood }}" class="lbl" row="1" col="1" />
+          <Label text="Gender: " class="lbl-bold" row="2" col="0" />
+          <Label text="{{ result.faceAttributes.gender }}" class="lbl" row="2" col="1" />
+      </GridLayout>
+  </GridLayout> 
+</ScrollView>
+
+</Page>
